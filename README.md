@@ -1,4 +1,4 @@
-#Playwright QA Automation – Profile Form Tests
+#Playwright QA Automation – Bluewindow-assessment
 
 This project uses [Playwright](https://playwright.dev/) with TypeScript to automate test cases for a user profile creation form hosted at: (https://qa-assessment.pages.dev/)
 
