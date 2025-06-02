@@ -1,0 +1,8 @@
+Bug ID,Description,Steps to reproduce,Expected Result,Actual Result,Severity,Status
+Bug-001,First Name does not accept multiple names and spaces,"Enter ""Ngeh Christian"" in the First name field and click enter",Field Accepts Input (Alphabetical characters only),"Error : ""First name must contain alphabetical characters only""",Medium,Open
+Bug-002,Blank Last name triggers wrong error message,Leave last name blank and click enter,"Error: ""Last name must be filled out""","error: ""First Name must be filled out""",High,Open
+Bug-003,Misleading Email validation,"enter ""christianngeh97@gmail.co""",Error (Invalid TLD),Accepted as valid,High,Open
+Bug-004,"Phone Number requires exactly 10 characters, not up to 10","enter ""123456789""",Input should be valid,"error: ""Please match the requested format""",Medium,Open
+Bug-005,Date of birth format,Select birth date ,Birth date format suggested should be yyyy-mm-dd,Birth date format suggested is mm-dd-yyyy,High,Open
+Bug-006,Date of birth accepts future dates,Select 12-25-2025,"Error: ""date of birth cannot be in the future""",Accepted as valid,High,Open
+Bug-007,LinkedIn marked as optional but triggers error when left blank,Leave LinkedIn URL blank and validate,No Error as field is optional,"Error: ""LinkedIn must be filled out""",High,Open

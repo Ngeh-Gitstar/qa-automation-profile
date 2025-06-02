@@ -1,0 +1,17 @@
+ TC ID,Field,Test Description ,Test Input,Expected Result,Pass/Fail,Bug Encountered
+TC01,First Name,Accepts only alphabetical Characters    ,"""Christian""",Success,Pass,-
+TC02,First Name,Rejects name with special characters,"""Christ!ian""","Error: ""First name must contain alphabetical characters only""",Pass,-
+TC03,First Name,Rejects name with space,"""Christian Ngeh""","Should accept if names are alphabetical character only, space-separated",fail,Space not allowed in name fields
+TC04,First Name,Validates blank first name,"""""","Errror: ""First name must be filled out""",Pass,-
+TC05,Last Name,Leaves last name blank,"""Christian"" (First Name)    """" (Last name)","errror: ""Last name must be filled out""",Fail,"Wrong error message displayed ""First Name must be filled out"""
+TC06,Email,Accepts Valid format,"""christianngeh97@gmail.com""",Success ,Pass,-
+TC07,Email,"Rejects invalid format ""missing .com""","""christianngeh97@gmail.co""","error expected ""email must be a valid email address""",fail,invalid emails are incorrectly validated
+TC08,Password,Accepts Alphanumeric keys with special characters,"""password-97""",Success,Pass,-
+TC09,Confirm Password,Requires matching passwords,"""password-97"" / ""password-96""","error: ""Passwords do not match""",pass,-
+TC10,LinkedIn URL,Accepts only valid LinkedIn profile URL,"""www.linkedin.com/in/ngeh-christian-ngeh-045b311ba""",Success,Fail,Only accepted with https:// prefix
+TC11,LinkedIn Input,Leave LinkedIn section blank,"""""","No error, form can be submitted",Fail,Optional but forces user to fill out the field
+TC12,Github URL,Accepts Valid Github URl,"""https://github.com/Ngeh-Gitstar""",Success,Pass,-
+TC13,Phone Number,Accepts exactly 10 digits,"""1234567890""",Success,Pass,-
+TC14,Phone Number,Accepts fewer than 10 digits,"""123456789""",Success,Fail,"Required exactly 10 digits to be validated, but requirements say maximum is 10 characters"
+TC15,Phone Number,Rejects alphabets and special characters,"""a123456789-""",Please match the required format,pass,-
+TC16,Phone Number,Rejects more that 10 digits,"""12345678901""",Please match the required format,pass,-
